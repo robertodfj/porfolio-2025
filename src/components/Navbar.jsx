@@ -1,7 +1,7 @@
 export default function NavBar() {
     return (
         <>
-            <nav>
+            <nav className="">
                 <a href="#inicio" className="">Inicio</a>
                 <a href="#sobre-mi" className="">Sobre mí</a>
                 <a href="#experiencia" className="">Experiencia</a>
