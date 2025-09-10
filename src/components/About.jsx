@@ -3,6 +3,11 @@ import { HiOutlineUser } from "react-icons/hi";
 export default function About() {
   return (
     <section className="text-gray-600 body-font">
+      {/* Título con línea */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-medium text-black mb-2">Sobre mí</h2>
+        <div className="w-24 h-1 bg-indigo-500 mx-auto rounded"></div>
+      </div>
       <div className="container px-5 py-24 mx-auto flex flex-wrap lg:flex-nowrap items-center">
         
         {/* Texto */}
