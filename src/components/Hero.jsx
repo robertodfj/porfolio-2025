@@ -1,4 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa"; // flecha
+
 
 export default function Hero() {
   return (
@@ -16,7 +18,7 @@ export default function Hero() {
         {/* Texto */}
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col justify-center md:items-start md:text-left items-center text-center h-full">
           <h1 className="title-font sm:text-4xl text-3xl font-medium text-gray-900">
-            Soy @robertodfj
+            Soy <p className="font-bold">@robertodfj</p>
           </h1>
           <h2 className="title-font sm:text-4xl text-3xl mb-4 mt--1 font-medium text-gray-900">
             Desarrollador de software.
@@ -26,7 +28,7 @@ export default function Hero() {
           <div className="flex justify-center md:justify-start space-x-4">
             {/* Botón GitHub */}
             <a
-              href="https://github.com/tuusuario"
+              href="https://github.com/robertodfj"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded text-lg"
@@ -37,7 +39,7 @@ export default function Hero() {
 
             {/* Botón LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/tuusuario/"
+              href="https://www.linkedin.com/in/robertodfj/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
@@ -47,6 +49,10 @@ export default function Hero() {
             </a>
           </div>
         </div>
+      </div>
+      {/* Flecha animada */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+        <FaArrowDown className="text-gray-700 animate-bounce" size={30} />
       </div>
     </section>
   );
