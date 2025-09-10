@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font">
+    <section className="text-gray-400 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
@@ -8,84 +8,80 @@ export default function Experience() {
             {/* Kyndryl */}
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                {/* Raya vertical */}
                 <div className="h-full w-1 bg-gray-800 pointer-events-none"></div>
               </div>
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                {/* Icono */}
+                {/* Icono servidor */}
                 <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
                   fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
                   viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
                 >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <rect x="3" y="4" width="18" height="6" rx="2" ry="2" />
+                  <rect x="3" y="14" width="18" height="6" rx="2" ry="2" />
+                  <path d="M7 10v4M17 10v4" />
                 </svg>
               </div>
               <div className="flex-grow pl-4">
                 <p className="leading-relaxed text-sm">Abril 2025 - Actualidad</p>
-                <h2 className="font-medium title-font text-lg text-white mb-1 tracking-wider">Kyndryl</h2>
+                <h2 className="font-medium title-font text-lg text-black mb-1 tracking-wider">Kyndryl</h2>
                 <p className="leading-relaxed">
                   Técnico CAU 24x7 (Centro de Atención a Usuarios) – Soporte de primer nivel.
                 </p>
               </div>
             </div>
 
-            {/* Desarrollo de Aplicaciones Multiplataforma */}
+            {/* DAM */}
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                {/* Raya vertical */}
                 <div className="h-full w-1 bg-gray-800 pointer-events-none"></div>
               </div>
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                {/* Icono */}
+                {/* Icono código en pantalla */}
                 <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
                   fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
                   viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
                 >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  <rect x="2" y="4" width="20" height="14" rx="2" ry="2" />
+                  <path d="M10 9l-2 2 2 2M14 9l2 2-2 2" />
                 </svg>
               </div>
               <div className="flex-grow pl-4">
                 <p className="leading-relaxed text-sm">Septiembre 2024 - Actualidad</p>
-                <h2 className="font-medium title-font text-lg text-white mb-1 tracking-wider">DAM</h2>
+                <h2 className="font-medium title-font text-lg text-black mb-1 tracking-wider">DAM</h2>
                 <p className="leading-relaxed">
                   Desarrollo de Aplicaciones Multiplataforma. Formación en programación orientada a objetos, bases de datos, aplicaciones móviles y entornos de desarrollo.
                 </p>
               </div>
             </div>
 
-            {/* SMR (último sin raya) */}
+            {/* SMR */}
             <div className="flex relative">
-              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                {/* No ponemos raya en el último */}
-              </div>
+              <div className="h-full w-10 absolute inset-0 flex items-center justify-center"></div>
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                {/* Icono */}
+                {/* Icono red */}
                 <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
                   fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
                   viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
                 >
-                  <circle cx="12" cy="5" r="3"></circle>
-                  <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.5-6.5l-2.8 2.8M8.3 15.7l-2.8 2.8m0-11.2l2.8 2.8m11.2 11.2l-2.8-2.8" />
                 </svg>
               </div>
               <div className="flex-grow pl-4">
                 <p className="leading-relaxed text-sm">2022 - 2024</p>
-                <h2 className="font-medium title-font text-lg text-white mb-1 tracking-wider">SMR</h2>
+                <h2 className="font-medium title-font text-lg text-black mb-1 tracking-wider">SMR</h2>
                 <p className="leading-relaxed">
                   Sistemas Microinformáticos y Redes. Montaje, configuración y mantenimiento de equipos, gestión de redes y soporte a usuarios.
                 </p>

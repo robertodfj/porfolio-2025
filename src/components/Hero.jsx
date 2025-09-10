@@ -1,28 +1,53 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 export default function Hero() {
   return (
-    <>
-      <section className="hero">
-        <h1 className="title">¡Hola!</h1>
-        <h2 className="subtitle">Soy</h2>
-        <h2 className="subtitle">@robertodfj</h2>
-        <h2 className="subtitle">Me encanta desarrollar</h2>
-        <img src="" alt="" className="icon" />
-        <img src="" alt="" className="icon" />
-        <button class="group relative inline-block focus:ring-3 focus:outline-hidden" href="#">
-          <span
-            class="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-green-300 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
-          ></span>
+    <section className="min-h-screen flex items-center text-gray-600 body-font">
+      <div className="container mx-auto flex px-5 md:flex-row flex-col items-center h-full">
+        {/* Imagen */}
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 h-full">
+          <img
+            className="object-cover object-center rounded w-full h-64 md:h-full"
+            alt="hero"
+            src="https://dummyimage.com/720x600"
+          />
+        </div>
 
-          <span
-            class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold tracking-widest text-black uppercase"
-          >
-            ¡Disponible!
-          </span>
+        {/* Texto */}
+        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col justify-center md:items-start md:text-left items-center text-center h-full">
+          <h1 className="title-font sm:text-4xl text-3xl font-medium text-gray-900">
+            Soy @robertodfj
+          </h1>
+          <h2 className="title-font sm:text-4xl text-3xl mb-4 mt--1 font-medium text-gray-900">
+            Desarrollador de software.
+          </h2>   
 
-          
-        </button>
-      </section>
-      
-    </>
+          {/* Botones */}
+          <div className="flex justify-center md:justify-start space-x-4">
+            {/* Botón GitHub */}
+            <a
+              href="https://github.com/tuusuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded text-lg"
+            >
+              <FaGithub size={20} />
+              GitHub
+            </a>
+
+            {/* Botón LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/tuusuario/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
+            >
+              <FaLinkedin size={20} />
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
