@@ -1,62 +1,100 @@
+import { useState } from "react";
+import { FaUtensils, FaLaptopCode, FaGithub } from "react-icons/fa";
+
 export default function Projects() {
+  const [activeTab, setActiveTab] = useState("Mesero");
+
+  const tabs = {
+    Mesero: {
+      icon: <FaUtensils className="w-5 h-5 mr-3" />,
+      title: "Mesero",
+      description: `Mesero es una aplicación en desarrollo diseñada para optimizar la gestión de pedidos en restaurantes. 
+Aunque aún no cuenta con un frontend, se incluye un video demostrativo que muestra en detalle todas las funcionalidades implementadas 
+en el backend, desarrollado con Java y Spring Boot. Este proyecto refleja mi capacidad para diseñar y programar soluciones robustas, 
+eficientes y escalables, preparadas para integrarse con futuras interfaces de usuario y nuevas funcionalidades, como alertas, escaneo de códigos QR y más.`,
+      // Aquí ponemos el ID del video de YouTube
+      videoId: "TU_VIDEO_ID_AQUI",
+      image: "", // dejamos vacío ya que usaremos el video
+    },
+    TaskFlow: {
+      icon: <FaLaptopCode className="w-5 h-5 mr-3" />,
+      title: "TaskFlow",
+      description: `TaskFlow es una aplicación inspirada en Jira, desarrollada para consolidar mis conocimientos full-stack en la creación 
+de APIs con Spring Boot y React. Esta herramienta permite gestionar proyectos de manera eficiente, visualizando el estado de las 
+tareas en tiempo real, asignando responsabilidades a usuarios y administradores, y manteniendo toda la información organizada de 
+forma clara y accesible. TaskFlow demuestra mi capacidad para diseñar soluciones completas, integrando backend y frontend, 
+listas para su uso en entornos profesionales.`,
+      image: "https://dummyimage.com/720x600",
+    },
+  };
+
   return (
-    <section className="text-gray-600 body-font">
-        {/* Título con línea */}
+    <section id="proyectos" className="text-gray-600 body-font">
+      {/* Título con línea */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-medium text-black mb-2">Proyectos personales</h2>
         <div className="w-24 h-1 bg-indigo-500 mx-auto rounded"></div>
       </div>
+
       <div className="container px-5 py-24 mx-auto flex flex-wrap flex-col">
-        
         {/* Tabs */}
         <div className="flex mx-auto flex-wrap mb-20">
-          <a className="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5 mr-3"
-              viewBox="0 0 24 24"
+          {Object.keys(tabs).map((tabKey) => (
+            <button
+              key={tabKey}
+              onClick={() => setActiveTab(tabKey)}
+              className={`inline-flex items-center py-3 px-5 rounded-lg border-2 ${
+                activeTab === tabKey
+                  ? "border-indigo-500 bg-indigo-100 text-indigo-700"
+                  : "border-gray-300 text-gray-600 hover:text-gray-800 hover:border-gray-400"
+              } mr-4 mb-4 focus:outline-none`}
             >
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-            Mesero
-          </a>
-          <a className="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5 mr-3"
-              viewBox="0 0 24 24"
-            >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-            TaskFlow
-          </a>
+              {tabs[tabKey].icon}
+              <span className="font-medium">{tabs[tabKey].title}</span>
+            </button>
+          ))}
         </div>
 
-        {/* Imagen */}
-        <img
-          className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 block mx-auto mb-10 object-cover object-center rounded"
-          alt="hero"
-          src="https://dummyimage.com/720x600"
-        />
+        {/* Imagen o Video */}
+        <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 block mx-auto mb-10 rounded overflow-hidden">
+          {activeTab === "Mesero" ? (
+            <iframe
+              width="100%"
+              height="360"
+              src={`https://www.youtube.com/embed/${tabs[activeTab].videoId}`}
+              title="Video Mesero"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded"
+            ></iframe>
+          ) : (
+            <img
+              src={tabs[activeTab].image}
+              alt={tabs[activeTab].title}
+              className="object-cover object-center rounded"
+            />
+          )}
+        </div>
 
-        {/* Texto */}
-        <div className="flex flex-col text-center w-full">
-          <h1 className="text-xl font-medium title-font mb-4 text-gray-900">
-            Master Cleanse Reliac Heirloom
-          </h1>
+        {/* Descripción */}
+        <div className="flex flex-col text-center w-full mb-6">
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify,
-            subway tile poke farm-to-table. Franzen you probably haven't heard of them
-            man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.
+            {tabs[activeTab].description}
           </p>
+        </div>
+
+        {/* Botón GitHub */}
+        <div className="text-center">
+          <a
+            href={`https://github.com/robertodfj/${tabs[activeTab].title}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded text-lg"
+          >
+            <FaGithub size={20} />
+            GitHub
+          </a>
         </div>
       </div>
     </section>

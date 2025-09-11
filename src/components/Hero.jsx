@@ -11,7 +11,7 @@ export default function Hero() {
           <img
             className="object-cover object-center rounded w-full h-64 md:h-full"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src="src/assets/roberto.png"
           />
         </div>
 

@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="text-gray-600 body-font relative">
+    <section id="contacto" className="text-gray-600 body-font relative">
       {/* Título con línea */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-medium text-black mb-2">Contacto</h2>
@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="flex flex-wrap -m-2">
           <div className="p-2 w-1/2">
             <div className="relative">
-              <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
+              <label htmlFor="name" className="leading-7 text-sm text-gray-600">Nombre</label>
               <input
                 type="text"
                 id="name"
@@ -33,7 +33,7 @@ export default function Contact() {
           </div>
           <div className="p-2 w-full">
             <div className="relative">
-              <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
+              <label htmlFor="message" className="leading-7 text-sm text-gray-600">¿Qué quieres decirme?</label>
               <textarea
                 id="message"
                 name="message"
@@ -54,29 +54,38 @@ export default function Contact() {
               © 2025 Roberto de Frutos Jimenez Legal. Todos los derechos reservados
             </p>
             <span className="inline-flex">
-              {/* Iconos de redes */}
-              <a className="text-gray-500">
-                <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a className="ml-4 text-gray-500">
-                <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a className="ml-4 text-gray-500">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a className="ml-4 text-gray-500">
-                <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>
-              </a>
-            </span>
+  {/* GitHub */}
+  <a href="https://github.com/robertodfj" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black">
+    <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
+      <path
+        fillRule="evenodd"
+        d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.41 7.86 10.94.58.1.79-.25.79-.56v-2.01c-3.2.7-3.88-1.39-3.88-1.39-.53-1.34-1.3-1.7-1.3-1.7-1.07-.74.08-.73.08-.73 1.18.08 1.8 1.22 1.8 1.22 1.05 1.79 2.76 1.27 3.44.97.1-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.6.23 2.78.11 3.07.75.81 1.2 1.84 1.2 3.1 0 4.43-2.68 5.41-5.24 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </a>
+
+    {/* LinkedIn */}
+    <a href="https://linkedin.com/in/robertodfj" target="_blank" rel="noopener noreferrer" className="ml-4 text-gray-500 hover:text-blue-600">
+      <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.1c.53-1 1.84-2.2 3.8-2.2 4.06 0 4.8 2.67 4.8 6.13V24h-4v-7.6c0-1.81 0-4.13-2.5-4.13-2.5 0-2.9 1.96-2.9 4v7.7h-4V8z" />
+      </svg>
+    </a>
+
+    {/* WhatsApp */}
+    <a href="https://wa.me/34623154438" target="_blank" rel="noopener noreferrer" className="ml-4 text-gray-500 hover:text-green-500">
+      <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.718 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 6.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.898 6.994c-.003 5.45-4.437 9.884-9.888 9.884" />
+      </svg>
+    </a>
+
+    {/* Correo */}
+    <a href="mailto:robertodfj@gmail.com" className="ml-4 text-gray-500 hover:text-red-500">
+      <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zm0 12H4V8.489l8 5.333 8-5.333V18z" />
+      </svg>
+    </a>
+  </span>
           </div>
         </div>
       </div>

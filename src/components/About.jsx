@@ -2,7 +2,7 @@ import { HiOutlineUser } from "react-icons/hi";
 
 export default function About() {
   return (
-    <section className="text-gray-600 body-font">
+    <section id="sobre-mi" className="text-gray-600 body-font">
       {/* Título con línea */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-medium text-black mb-2">Sobre mí</h2>
@@ -73,7 +73,7 @@ export default function About() {
           <img
             alt="feature"
             className="object-cover object-center h-full w-full"
-            src="https://dummyimage.com/460x500"
+            src="src/assets/about.png"
           />
         </div>
 
