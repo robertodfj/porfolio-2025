@@ -13,7 +13,7 @@ export default function Experience() {
         <div className="lg:w-3/5 w-full mb-10 lg:mb-0">
           <img
             className="object-cover object-center rounded-lg w-full h-full"
-            src="src/assets/exp.png" // pon tu imagen aquí
+            src="src/assets/exp.png" 
             alt="experience"
           />
         </div>
