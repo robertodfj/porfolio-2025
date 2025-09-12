@@ -1,10 +1,11 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLanguage, FaLinkedin } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa"; // flecha
+import { FiMoon } from "react-icons/fi";
 
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center text-gray-600 body-font">
+    <section id="inicio" className="min-h-screen flex items-center text-gray-600 body-font">
       <div className="container mx-auto flex px-5 md:flex-row flex-col items-center h-full">
         {/* Imagen */}
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 h-full">

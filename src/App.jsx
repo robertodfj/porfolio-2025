@@ -11,19 +11,8 @@ function App() {
     <>
       <NavBar />
       <Hero />
-
-      <div className="flex flex-col min-h-screen">
-        {/* Mitad superior: About */}
-        <div className="h-1/2 overflow-y-auto">
-          <About />
-        </div>
-
-        {/* Mitad inferior: Experience */}
-        <div className="h-1/2 overflow-y-auto">
-          <Experience />
-        </div>
-      </div>
-
+      <About />
+      <Experience />
       <Projects />
       <Tech />
       <Contact />
