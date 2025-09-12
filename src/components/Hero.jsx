@@ -1,5 +1,6 @@
 import { FaGithub, FaLanguage, FaLinkedin } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa"; // flecha
+import { FaDownload } from "react-icons/fa6";
 import { FiMoon } from "react-icons/fi";
 
 
@@ -47,6 +48,17 @@ export default function Hero() {
             >
               <FaLinkedin size={20} />
               LinkedIn
+            </a>
+
+            {/* Botón CV */}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded text-lg"
+            >
+              <FaDownload size={20} />
+              CV
             </a>
           </div>
         </div>
