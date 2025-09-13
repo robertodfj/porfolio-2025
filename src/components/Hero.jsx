@@ -9,13 +9,13 @@ export default function Hero() {
     <section id="inicio" className="min-h-screen flex items-center text-gray-600 body-font">
       <div className="container mx-auto flex px-5 md:flex-row flex-col items-center h-full">
         {/* Imagen */}
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 h-full">
-          <img
-            className="object-cover object-center rounded w-full h-64 md:h-full"
-            alt="hero"
-            src="src/assets/roberto.png"
-          />
-        </div>
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0">
+            <img
+              className="object-cover object-center rounded w-full h-auto max-h-[500px]"
+              alt="hero"
+              src="src/assets/roberto.png"
+            />
+          </div>
 
         {/* Texto */}
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col justify-center md:items-start md:text-left items-center text-center h-full">
