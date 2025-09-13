@@ -37,7 +37,7 @@ export default function Experience() {
               <p className="leading-relaxed text-sm">Abril 2025 - Actualidad</p>
               <h3 className="font-medium title-font text-lg text-black mb-1 tracking-wider">Kyndryl</h3>
               <p className="leading-relaxed">
-                Técnico CAU 24x7 (Centro de Atención a Usuarios) – Soporte de primer nivel.
+                Técnico CAU 24x7 en ingles. (Centro de Atención a Usuarios) – Soporte de primer nivel.
               </p>
             </div>
           </div>

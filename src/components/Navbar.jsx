@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaHome, FaUser, FaBriefcase, FaLaptopCode, FaEnvelope, FaLanguage } from "react-icons/fa";
-import { FiMoon } from "react-icons/fi";
 import { HiMenu, HiX } from "react-icons/hi";
 
 export default function NavBar() {
@@ -43,23 +42,6 @@ export default function NavBar() {
             <span className="text-sm">Contacto</span>
           </a>
         </div>
-
-        {/* Botones a la derecha en desktop */}
-        <div className="hidden md:flex space-x-4 items-center">
-          <a
-            href="#"
-            className="inline-flex items-center text-white bg-indigo-500 hover:bg-indigo-600 py-2 px-4 rounded-full focus:outline-none text-lg"
-          >
-            <FaLanguage size={20} />
-          </a>
-
-          <a
-            href="#"
-            className="inline-flex items-center text-white bg-gray-800 py-2 px-4 rounded-full focus:outline-none hover:bg-gray-900 text-lg"
-          >
-            <FiMoon size={20} />
-          </a>
-        </div>
       </div>
 
       {/* Menú móvil desplegable */}
@@ -81,22 +63,6 @@ export default function NavBar() {
             <a href="#contacto" className="flex items-center space-x-2 text-gray-600 hover:text-black transition">
               <FaEnvelope /> <span>Contacto</span>
             </a>
-
-            {/* Botones de idioma y dark mode en móvil */}
-            <div className="flex space-x-4 pt-4">
-              <a
-                href="#"
-                className="inline-flex items-center text-white bg-indigo-500 hover:bg-indigo-600 py-2 px-4 rounded-full"
-              >
-                <FaLanguage size={20} />
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center text-white bg-gray-800 hover:bg-gray-900 py-2 px-4 rounded-full"
-              >
-                <FiMoon size={20} />
-              </a>
-            </div>
           </div>
         </div>
       )}

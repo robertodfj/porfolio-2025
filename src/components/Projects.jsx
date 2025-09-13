@@ -13,7 +13,7 @@ Aunque aún no cuenta con un frontend, se incluye un video demostrativo que mues
 en el backend, desarrollado con Java y Spring Boot. Este proyecto refleja mi capacidad para diseñar y programar soluciones robustas, 
 eficientes y escalables, preparadas para integrarse con futuras interfaces de usuario y nuevas funcionalidades, como alertas, escaneo de códigos QR y más.`,
       // Aquí ponemos el ID del video de YouTube
-      videoId: "TU_VIDEO_ID_AQUI",
+      videoId: "qzGxK6Uiu04",
       image: "", // dejamos vacío ya que usaremos el video
     },
     TaskFlow: {
@@ -24,7 +24,7 @@ de APIs con Spring Boot y React. Esta herramienta permite gestionar proyectos de
 tareas en tiempo real, asignando responsabilidades a usuarios y administradores, y manteniendo toda la información organizada de 
 forma clara y accesible. TaskFlow demuestra mi capacidad para diseñar soluciones completas, integrando backend y frontend, 
 listas para su uso en entornos profesionales.`,
-      image: "https://dummyimage.com/720x600",
+      image: "src/assets/taskflow.png",
     },
   };
 
