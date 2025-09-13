@@ -1,5 +1,5 @@
 import { FaDownload, FaGithub, FaHtml5, FaJava, FaJs, FaReact } from "react-icons/fa";
-import { SiSpringboot, SiMysql, SiTailwindcss, SiAdobe, SiNetlify } from "react-icons/si";
+import { SiSpringboot, SiMysql, SiTailwindcss, SiAdobe, SiNetlify, SiJira } from "react-icons/si";
 
 export default function Tech() {
   return (
@@ -106,6 +106,16 @@ export default function Tech() {
                   <SiTailwindcss color="white" />
                 </div>
                 <h2 className="text-gray-900 text-2xl title-font font-medium">Tailwind CSS.</h2>
+              </div>
+            </div>
+
+            {/* Jira */}
+            <div className="p-4 md:w-1/3">
+              <div className="flex flex-col items-center rounded-lg h-full bg-gray-100 p-8">
+                <div className="flex justify-center items-center mb-4 w-20 h-20 bg-white-600 rounded-full text-white text-5xl">
+                  <SiJira color="Blue" />
+                </div>
+                <h2 className="text-gray-900 text-2xl title-font font-medium">Jira.</h2>
               </div>
             </div>
 
