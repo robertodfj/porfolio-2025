@@ -1,22 +1,28 @@
 import { HiOutlineUser } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="text-gray-600 body-font">
+    <section id="sobre-mi" className="text-gray-600 body-font bg-gradient-to-b from-white to-gray-50">
       {/* Título con línea */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-medium text-black mb-2">Sobre mí</h2>
-        <div className="w-24 h-1 bg-indigo-500 mx-auto rounded"></div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Sobre mí</h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto rounded"></div>
       </div>
-      <div className="container px-5 py-24 mx-auto flex flex-wrap lg:flex-nowrap items-center">
+
+      <div className="container px-5 py-16 mx-auto flex flex-wrap lg:flex-nowrap items-center gap-12">
         
         {/* Texto */}
-        <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pr-12 lg:text-left text-center">
-          
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col flex-wrap lg:w-1/2 lg:pr-12 lg:text-left text-center space-y-10"
+        >
           {/* Trabajo */}
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-              {/* Icono de maletín */}
+          <div className="flex flex-col lg:items-start items-center">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white mb-5 shadow-lg">
+              {/* Icono maletín */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -33,49 +39,51 @@ export default function About() {
               </svg>
             </div>
             <div className="flex-grow">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+              <h2 className="text-gray-900 text-xl font-semibold mb-3">
                 En el trabajo...
               </h2>
               <p className="leading-relaxed text-base">
-                Soy una persona que estudia y trabaja al mismo tiempo, 
-                lo que me ha enseñado a organizarme, ser constante y a 
-                dar siempre lo mejor de mí. Actualmente estoy finalizando
-                el ciclo de Desarrollo de Aplicaciones Multiplataforma 
-                (DAM) y disfruto creando APIs con Spring Boot e 
-                integrándolas con frontends en React.
+                Combino estudios y trabajo, lo que me ha permitido
+                desarrollar organización, constancia y compromiso.
+                Estoy finalizando el ciclo de{" "}
+                <span className="font-semibold text-indigo-600">Desarrollo de Aplicaciones Multiplataforma (DAM)</span>, 
+                y disfruto especialmente creando APIs con <span className="font-semibold">Spring Boot </span> 
+                e integrándolas con frontends en <span className="font-semibold">React</span>.
               </p>
             </div>
           </div>
 
-          {/* Tiempo libre*/}
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-              {/* Icono de persona */}
+          {/* Tiempo libre */}
+          <div className="flex flex-col lg:items-start items-center">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white mb-5 shadow-lg">
               <HiOutlineUser className="h-6 w-6" />
             </div>
             <div className="flex-grow">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+              <h2 className="text-gray-900 text-xl font-semibold mb-3">
                 En mi tiempo libre...
               </h2>
               <p className="leading-relaxed text-base">
-                  Me gusta viajar y hacer deporte, 
-                  actividades que me ayudan a mantenerme motivado y con 
-                  energía para seguir creciendo tanto a nivel personal 
-                  como profesional.
+                Me apasiona viajar y hacer deporte, actividades que me ayudan 
+                a mantenerme motivado, con energía y con nuevas perspectivas
+                que aplico tanto en mi vida personal como en mi desarrollo profesional.
               </p>
             </div>
           </div>
-
-        </div>
+        </motion.div>
 
         {/* Imagen */}
-        <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="lg:w-1/2 w-full rounded-2xl overflow-hidden shadow-lg"
+        >
           <img
-            alt="feature"
-            className="object-cover object-center h-full w-full"
+            alt="about"
+            className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-500"
             src="src/assets/about.png"
           />
-        </div>
+        </motion.div>
 
       </div>
     </section>
