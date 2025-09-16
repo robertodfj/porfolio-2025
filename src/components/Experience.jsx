@@ -1,6 +1,7 @@
 import { FaDownload } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import expImg from "../assets/exp.png";
+import certs from "../assets/certsRDF.pdf";
 
 export default function Experience() {
   return (
@@ -99,7 +100,7 @@ export default function Experience() {
 
           {/* Botón CV */}
           <a
-            href="src/assets/certsRDF.pdf"
+            href={certs}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-white bg-gradient-to-r from-indigo-500 to-purple-600 py-2 px-6 mt-6 rounded-lg shadow-md hover:scale-105 transition-transform text-lg font-medium"

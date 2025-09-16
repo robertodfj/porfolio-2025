@@ -4,6 +4,7 @@ import { FaDownload } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import heroImg from "../assets/roberto.png";
+import cv from "../assets/cvRDF.pdf";
 export default function Hero() {
   return (
     <section
@@ -77,7 +78,7 @@ export default function Hero() {
 
             {/* CV */}
             <a
-              href="src/assets/cvRDF.pdf"
+              href={cv}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:scale-105 transform transition rounded-lg text-lg shadow-md"
