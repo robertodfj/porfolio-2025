@@ -9,18 +9,18 @@ export default function Projects() {
       icon: <FaUtensils className="w-5 h-5 mr-2" />,
       title: "Mesero",
       description: `Mesero es una aplicación en desarrollo diseñada para optimizar la gestión de pedidos en restaurantes. 
-Incluye un video demostrativo que muestra todas las funcionalidades implementadas en el backend con Java y Spring Boot. 
-Este proyecto refleja mi capacidad para diseñar soluciones escalables, listas para integrarse con interfaces y nuevas 
-funcionalidades como alertas y escaneo de códigos QR.`,
-      videoId: "qzGxK6Uiu04",
+                    Incluye un video demostrativo que muestra todas las funcionalidades implementadas en el backend con Java y Spring Boot. 
+                    Este proyecto refleja mi capacidad para diseñar soluciones escalables, listas para integrarse con interfaces y nuevas 
+                    funcionalidades como alertas y escaneo de códigos QR.`,
+      videoId: "n2fKeVxJVg8",
       image: "",
     },
     TaskFlow: {
       icon: <FaLaptopCode className="w-5 h-5 mr-2" />,
       title: "TaskFlow",
       description: `TaskFlow es una aplicación inspirada en Jira, desarrollada para consolidar mis conocimientos full-stack. 
-Permite gestionar proyectos, asignar tareas y visualizar su estado en tiempo real. Desarrollada con Spring Boot en el backend 
-y React en el frontend, demuestra mi capacidad para crear soluciones completas y listas para entornos profesionales.`,
+                    Permite gestionar proyectos, asignar tareas y visualizar su estado en tiempo real. Desarrollada con Spring Boot en el backend 
+                    y React en el frontend, demuestra mi capacidad para crear soluciones completas y listas para entornos profesionales.`,
       image: "src/assets/taskflow.png",
     },
   };
@@ -56,7 +56,7 @@ y React en el frontend, demuestra mi capacidad para crear soluciones completas y
         </div>
 
         {/* Imagen o Video */}
-        <div className="w-full max-w-3xl mb-10 rounded-xl overflow-hidden shadow-lg">
+        <div className="w-full max-w-3xl mb-10 rounded-xl overflow-hidden">
           {activeTab === "Mesero" ? (
             <iframe
               width="100%"
