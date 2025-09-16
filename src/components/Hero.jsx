@@ -5,7 +5,6 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import heroImg from "../assets/roberto.png";
 import cv from "../assets/cvRDF.pdf";
-
 export default function Hero() {
   return (
     <section
@@ -42,7 +41,7 @@ export default function Hero() {
           <h2 className="title-font sm:text-4xl text-3xl mb-6 font-medium">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600">
               <Typewriter
-                words={["Desarrollador web", "Desarrollador de APIs", "Desarrollador Full Stack"]}
+                words={["Desarrollador web", "Desarrollador de APIs", "Desarrollador Full Stack", ]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -54,15 +53,16 @@ export default function Hero() {
           </h2>
 
           {/* Botones */}
-          <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4 mt-4 w-full md:w-auto items-center">
+          <div className="flex justify-center md:justify-start space-x-4 mt-4">
             {/* GitHub */}
             <a
               href="https://github.com/robertodfj"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white bg-gray-800 border-0 py-2 px-6 rounded-lg text-lg shadow-md hover:scale-105 transform transition"
+              className="inline-flex items-center gap-2 text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:scale-105 transform transition rounded-lg text-lg shadow-md"
             >
-              <FaGithub size={20} /> GitHub
+              <FaGithub size={20} />
+              GitHub
             </a>
 
             {/* LinkedIn */}
@@ -70,9 +70,10 @@ export default function Hero() {
               href="https://www.linkedin.com/in/robertodfj/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white bg-blue-600 border-0 py-2 px-6 rounded-lg text-lg shadow-md hover:scale-105 transform transition"
+              className="inline-flex items-center gap-2 text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:scale-105 transform transition rounded-lg text-lg shadow-md"
             >
-              <FaLinkedin size={20} /> LinkedIn
+              <FaLinkedin size={20} />
+              LinkedIn
             </a>
 
             {/* CV */}
@@ -80,16 +81,17 @@ export default function Hero() {
               href={cv}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white bg-green-600 border-0 py-2 px-6 rounded-lg text-lg shadow-md hover:scale-105 transform transition"
+              className="inline-flex items-center gap-2 text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:scale-105 transform transition rounded-lg text-lg shadow-md"
             >
-              <FaDownload size={20} /> CV
+              <FaDownload size={20} />
+              CV
             </a>
           </div>
         </motion.div>
       </div>
 
       {/* Flecha animada */}
-      <div className="absolute bottom-12 sm:bottom-6 left-1/2 transform -translate-x-1/2">
+      <div className="hidden md:block absolute bottom-6 left-1/2 transform -translate-x-1/2">
         <FaArrowDown className="text-gray-700 animate-bounce" size={30} />
       </div>
     </section>
