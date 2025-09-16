@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaUtensils, FaLaptopCode, FaGithub } from "react-icons/fa";
+import taskImg from "../assets/taskflow.png";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("Mesero");
@@ -21,7 +22,7 @@ export default function Projects() {
       description: `TaskFlow es una aplicación inspirada en Jira, desarrollada para consolidar mis conocimientos full-stack. 
                     Permite gestionar proyectos, asignar tareas y visualizar su estado en tiempo real. Desarrollada con Spring Boot en el backend 
                     y React en el frontend, demuestra mi capacidad para crear soluciones completas y listas para entornos profesionales.`,
-      image: "src/assets/taskflow.png",
+      image: {taskImg},
     },
   };
 

@@ -3,7 +3,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-
+import heroImg from "../assets/roberto.png";
 export default function Hero() {
   return (
     <section
@@ -21,7 +21,7 @@ export default function Hero() {
           <img
             className="object-cover object-center rounded-2xl w-full h-auto max-h-[500px] shadow-lg"
             alt="hero"
-            src="src/assets/roberto.png"
+            src={heroImg}
           />
         </motion.div>
 

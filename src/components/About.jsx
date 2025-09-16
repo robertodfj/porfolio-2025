@@ -1,6 +1,6 @@
 import { HiOutlineUser } from "react-icons/hi";
 import { motion } from "framer-motion";
-
+import aboutImg from "../assets/about.png";
 export default function About() {
   return (
     <section id="sobre-mi" className="text-gray-600 body-font bg-gradient-to-b from-white to-gray-50">
@@ -81,7 +81,7 @@ export default function About() {
           <img
             alt="about"
             className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-500"
-            src="src/assets/about.png"
+            src={aboutImg}
           />
         </motion.div>
 

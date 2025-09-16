@@ -1,5 +1,6 @@
 import { FaDownload } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import expImg from "../assets/exp.png";
 
 export default function Experience() {
   return (
@@ -21,7 +22,7 @@ export default function Experience() {
         >
           <img
             className="object-cover object-center w-full h-full hover:scale-105 transition-transform duration-500"
-            src="src/assets/exp.png"
+            src={expImg}
             alt="experience"
           />
         </motion.div>
