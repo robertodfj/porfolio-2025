@@ -25,7 +25,7 @@ export default function Projects() {
                     y React en el frontend, demuestra mi capacidad para crear soluciones completas y listas para entornos profesionales.`,
       image: taskImg,
     },
-    rock-paper-scissors: {
+    PiedraPapelTijera: {
       icon: <FaCamera className="w-5 h-5 mr-2" />,
       title: "Piedra, Papel o Tijera con Cámara",
       description: `Piedra, Papel o Tijera con Cámara es un proyecto personal desarrollado en Java que combina lógica de juego con visión por computadora. 
