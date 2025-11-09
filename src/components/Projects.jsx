@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUtensils, FaLaptopCode, FaGithub, FaCamera } from "react-icons/fa";
 import taskImg from "../assets/taskflow.png";
-import pptImg from "../assets/piedraPapelTijera.png"; // <-- Añade esta imagen si la tienes
+import pptImg from "../assets/taskflow.png"; 
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("Mesero");
