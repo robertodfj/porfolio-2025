@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUtensils, FaLaptopCode, FaGithub, FaCamera } from "react-icons/fa";
 import taskImg from "../assets/taskflow.png";
-import pptImg from "../assets/taskflow.png"; 
+import pptImg from "../assets/piedra.jpg"; 
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("Mesero");
@@ -25,7 +25,7 @@ export default function Projects() {
                     y React en el frontend, demuestra mi capacidad para crear soluciones completas y listas para entornos profesionales.`,
       image: taskImg,
     },
-    PiedraPapelTijera: {
+    rock-paper-scissors: {
       icon: <FaCamera className="w-5 h-5 mr-2" />,
       title: "Piedra, Papel o Tijera con Cámara",
       description: `Piedra, Papel o Tijera con Cámara es un proyecto personal desarrollado en Java que combina lógica de juego con visión por computadora. 
