@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { FaUtensils, FaLaptopCode, FaGithub } from "react-icons/fa";
+import { FaUtensils, FaLaptopCode, FaGithub, FaCamera } from "react-icons/fa";
 import taskImg from "../assets/taskflow.png";
+import pptImg from "../assets/piedraPapelTijera.png"; // <-- Añade esta imagen si la tienes
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("Mesero");
@@ -23,6 +24,24 @@ export default function Projects() {
                     Permite gestionar proyectos, asignar tareas y visualizar su estado en tiempo real. Desarrollada con Spring Boot en el backend 
                     y React en el frontend, demuestra mi capacidad para crear soluciones completas y listas para entornos profesionales.`,
       image: taskImg,
+    },
+    PiedraPapelTijera: {
+      icon: <FaCamera className="w-5 h-5 mr-2" />,
+      title: "Piedra, Papel o Tijera con Cámara",
+      description: `Piedra, Papel o Tijera con Cámara es un proyecto personal desarrollado en Java que combina lógica de juego con visión por computadora. 
+                    Inspirado en un experimento visto en redes, decidí recrear el clásico juego usando OpenCV para detectar la forma de la mano del usuario 
+                    en tiempo real y determinar su jugada frente al ordenador. 
+
+                    Este proyecto me permitió profundizar en el procesamiento de imágenes, el uso de OpenCV en Java y la integración entre detección visual 
+                    y lógica de juego.
+
+                    🔹 Captura de vídeo en tiempo real
+                    🔹 Detección de gestos de la mano (piedra, papel o tijera)
+                    🔹 Comparación automática con la jugada del ordenador
+                    🔹 Resultado mostrado dinámicamente en pantalla
+
+                    Una experiencia práctica y divertida que refuerza mis conocimientos en Java + OpenCV + visión artificial 👀`,
+      image: pptImg,
     },
   };
 
@@ -58,7 +77,7 @@ export default function Projects() {
 
         {/* Imagen o Video */}
         <div className="w-full max-w-3xl mb-10 rounded-xl overflow-hidden">
-          {activeTab === "Mesero" ? (
+          {tabs[activeTab].videoId ? (
             <iframe
               width="100%"
               height="400"
@@ -79,7 +98,7 @@ export default function Projects() {
         </div>
 
         {/* Descripción */}
-        <div className="flex flex-col text-center w-full mb-6">
+        <div className="flex flex-col text-center w-full mb-6 whitespace-pre-line">
           <p className="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700">
             {tabs[activeTab].description}
           </p>
@@ -88,7 +107,7 @@ export default function Projects() {
         {/* Botón GitHub */}
         <div className="text-center">
           <a
-            href={`https://github.com/robertodfj/${tabs[activeTab].title}`}
+            href={`https://github.com/robertodfj/${tabs[activeTab].title.replace(/\s/g, "")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-white bg-gray-800 border-0 py-3 px-8 rounded-lg text-lg shadow-md transition hover:bg-gray-900 hover:shadow-lg"
